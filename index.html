@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="author" content="Curt Hostetter" />
+		<meta name="keywords" content="Curt Hostetter" />
+		<meta name="description" content="Curt Hostetter - Software engineer in Buffalo, NY" />
+        
+        <link rel="stylesheet" type="text/css" href="" />
+        <link rel="icon" type="image/png" href="" />
+		<!--<link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />-->
+        
+		<style type="text/css">
+			body{
+				position: relative;
+				margin: 0;
+				padding: 0;
+				background-image: url('images/bg_background.jpg');
+				background-repeat: no-repeat;
+				background-color: #323232;
+				text-align: center;
+				z-index: 1;
+			}
+			#container{
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				width: 538px;
+				height: 100%;
+			}
+			#top_header{
+				text-align: left;
+				position: relative;
+				margin-top: 100px;
+				width: 538px;
+				height: 127px;
+				background-image: url('images/bg_top.png');
+				z-index: 5;
+				margin-bottom: 0px;
+				padding-bottom: 0px;
+
+			}
+
+			.font{
+				font-family: "Georgia", "Times", "Times New Roman", "serif";
+				color: #fff;
+			}
+			#content{
+				position: relative;
+				width: 538px;
+				height: 287px;
+				background-image: url('images/bg_body.png');
+				z-index: 3;
+				padding: 0;
+				margin:0;
+				border: 0px solid black;
+			}
+			#top_shadow{
+				position: absolute;
+				width: 538px;
+				height: 27px;
+				top: 0;
+				left: 0;
+				background-image: url('images/bg_top_shadow.png');
+				z-index: 5;
+				margin-top: 0px;
+				padding-top: 0px;
+				
+			}
+			#bottom_shadow{
+				position: absolute;
+				width: 538px;
+				height: 19px;
+				bottom: 0;
+				left: 0;
+				background-image: url('images/bg_bottom_shadow.png');
+				z-index: 5;
+			}
+			#content_body{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 538px;
+				height: 285px;
+				z-index: 4;
+				text-align: left;
+				/*margin-top: -56px;*/
+			}
+			#bottom_footer{
+				text-align: right;
+				width: 538px;
+				height: 39px;
+				z-index: 10;
+				background-image: url('images/bg_bottom.png');
+			}
+			#copyright{
+				font-weight: normal;
+				font-size: 7pt;
+				text-align: right;
+				margin-right: 45px;
+				padding-top: 4px;
+			}
+			#header_left{
+				position: relative;
+				float:left;
+				height: 79px;
+				width: 261px;
+				margin-top: 30px;
+				margin-left: 40px;
+				/*background-image: url('images/top_logo.png');*/
+			}
+
+			#header_right{
+				position: relative;
+				float:left;
+				margin-top: 30px;
+				height: 79px;
+				width: 215px;
+				
+			}
+
+			#nav{
+				margin-left: 35px;
+				margin-top: 2px;
+				height: 54px;
+			}
+			#nav img{
+				margin-right: 13px;
+				
+			}
+			#position{
+				font-weight: normal;
+				font-size: 7pt;
+				margin-top: 5px;
+				margin-left: 30px;
+			}
+			.image_link{
+				border: 0px solid black;
+			}
+
+			a{
+			  outline: none;
+			}
+			:-moz-any-link:focus {
+			  outline: none;
+			}
+
+
+			#content_contact{
+				margin-top: 20px;
+				/*padding-top: 20px;*/
+				margin-left: 28px;
+				position: absolute;
+				top: 0;
+				width: 481px;
+				height: 267px;
+				background-image: url('images/bg_contact.png');
+				background-repeat: no-repeat;
+				z-index: 4;
+			}
+			#content_about{
+				margin-top: 20px;
+				/*padding-top: 20px;*/
+				margin-left: 28px;
+				position: absolute;
+				top: 0;
+				width: 481px;
+				height: 267px;
+				background-image: url('images/bg_about.png');
+				background-repeat: no-repeat;
+				display: none;
+				z-index: 4;
+			}
+
+			#contact_title{
+				text-align: center;
+				font-weight: bold;
+				font-size: 12pt;
+				/*padding-top: 20px;*/
+			}
+			.contact_link{
+				height: 32px;
+				width: 145px;
+				border: 0px solid black;
+				margin-bottom: 30px;
+			}
+			.network_title{
+				font-weight: bold;
+				font-size: 8pt;
+				padding-left: 5px;
+				margin-bottom: 2px;
+				margin-top: 1px;
+			}
+			.network_username{
+				font-weight: normal;
+				font-size: 7pt;
+				padding-left: 5px;
+				
+			}
+			.network_icon{
+				width: 32px;
+				height: 32px;
+				float: left;
+				margin-right: 5px;
+			}
+			#contact_links_container{
+				margin-top: 15px;
+				margin-left: 10px;
+			}
+			#contact_links_left{
+				float: left;
+				border: 0px solid white;
+				margin-left: 20px;
+				width: 150px;
+			}
+			#contact_links_center{
+				float: left;
+
+				border: 0px solid blue;
+				width: 150px;
+			}
+			#contact_links_right{
+				float: left;
+				border: 0px solid red;
+				width: 150px;
+			}
+			#content_about_container{
+				font-weight: normal;
+				font-size: 16pt;
+				width: 420px;
+				margin-left: 35px;
+				padding-top: 15px;
+				/*margin-top: 35px;*/
+
+			}
+			#content_contact_container{
+				padding-top: 20px;
+			}
+			
+			.focused{
+				border: 1px solid black;
+			}
+		</style>
+
+        <script src="js/jquery-1.4.min.js"></script>
+		<script src="js/jquery.cycle.all.2.72.js"></script>
+		<script src="http://jqueryui.com/latest/ui/effects.core.js"></script>
+		<script src="http://jqueryui.com/latest/ui/effects.shake.js"></script>
+
+		<script src="http://jqueryui.com/latest/ui/effects.slide.js"></script>
+
+        <script>
+
+			function goContact() {
+				//alert("");
+				document.title = "Curt Hostetter - Contact me, find me, add me, follow me - Software engineer in Buffalo, NY";
+				if (!$("#content").hasClass("contact")){ 
+					$('#content_about').stop(true,true);
+					$('#content_contact').stop(true,true);
+					$("#content").removeClass("about");
+					$("#content").addClass("contact");
+					$('#content_about').hide("slide", { direction: "down" }, 500);
+					$('#content_contact').show("slide", { direction: "up" }, 500);
+				}else{
+					if (!$("#content").hasClass("shake")){ 
+						$("#content").addClass("shake");
+						$("#content_contact").effect("shake", { times:3, distance: 3, direction: "down" }, 40);
+						setTimeout('$("#content").removeClass("shake");', 1000);
+					}
+					
+				}
+			}
+			function goAbout() {
+				document.title = "Curt Hostetter - About me - Software engineer in Buffalo, NY";
+				if (!$("#content").hasClass("about")){ 
+					$('#content_about').stop(true,true);
+					$('#content_contact').stop(true,true);
+					$("#content").removeClass("contact");
+					$("#content").addClass("about");
+					$('#content_contact').hide("slide", { direction: "up" }, 500);
+					$('#content_about').show("slide", { direction: "down" }, 500);
+				
+				}else{
+					if (!$("#content").hasClass("shake")){ 
+						$("#content").addClass("shake");
+						$("#content_about").effect("shake", { times:3, distance: 3, direction: "up" }, 40);
+						setTimeout('$("#content").removeClass("shake");', 1000);
+					}
+				}
+			}
+
+
+            $(document).ready( function(){
+			   $("#content").addClass("contact");
+			   $("#button_contact").click(goContact);
+			   $("#button_about").click(goAbout);
+
+			   PEPS.rollover.init();
+				
+				/*$('.contact_link')
+				.focusin(function(){
+					jQuery(this).addClass('focused');
+				});
+				.focusout(function(){
+					jQuery(this).removeClass('focused');
+				});*/
+
+			});
+
+
+			PEPS = {};
+
+			PEPS.rollover =
+			{
+			   init: function()
+			   {
+				  this.preload();
+				 
+				  $(".ro").hover(
+					 function () { $(this).attr( 'src', PEPS.rollover.newimage($(this).attr('src')) ); },
+					 function () { $(this).attr( 'src', PEPS.rollover.oldimage($(this).attr('src')) ); }
+				  );
+			   },
+
+			   preload: function()
+			   {
+				  $(window).bind('load', function() {
+					 $('.ro').each( function( key, elm ) { $('<img>').attr( 'src', PEPS.rollover.newimage( $(this).attr('src') ) ); });
+				  });
+			   },
+			   
+			   newimage: function( src )
+			   {
+				  return src.substring( 0, src.search(/(\.[a-z]+)$/) ) + '_o' + src.match(/(\.[a-z]+)$/)[0];
+			   },
+
+			   oldimage: function( src )
+			   {
+				  return src.replace(/_o\./, '.');
+			   }
+			};
+        </script>
+
+    </head>
+	<body>
+		<div id="container">
+			<div id="top_header">
+				<div id="header_left">
+					<img id="main_logo" src="images/top_logo.png" alt="Curt Hostetter Software Engineer Buffalo, NY" />
+				</div>
+				<div id="header_right">
+					<div id="nav">
+						<a href="#"><img id="button_about" src="images/button_about.png" alt="about page" class="image_link ro" /></a>
+						<a href="#"><img id="button_contact" src="images/button_contact.png" alt="contact page" class="image_link ro" /></a>
+					</div>
+					<!--
+					
+					-->
+					<div id="position" class="font">
+						software engineer @ The Hive Group
+					</div>
+				</div>
+			</div>
+			<div id="content">
+				<div id="top_shadow"></div>
+				<div id="content_body">
+					<div id="content_contact">
+						<div id="content_contact_container">
+							<div id="contact_title" class="font">find me, add me, follow me</div>
+							<div id="contact_links_container">
+								
+								<div id="contact_links_left">
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/email_32.png" /></div>
+										<div class="network_title font">E-mail</div>
+										<div class="network_username font">hostetcl@gmail.com</div>
+									</div>
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/aim_32.png" /></div>
+										<div class="network_title font">Aol. IM</div>
+										<div class="network_username font">curt l h</div>
+									</div>
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/skype_32.png" /></div>
+										<div class="network_title font">Skype</div>
+										<div class="network_username font">hostetcl</div>
+									</div>
+								</div>
+
+								<div id="contact_links_center">
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/linkedin_32.png" /></div>
+										<div class="network_title font">LinkedIn</div>
+										<div class="network_username font">chostetter</div>
+									</div>
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/google_32.png" /></div>
+										<div class="network_title font">Google</div>
+										<div class="network_username font">hostetcl</div>
+									</div>
+									<div class="contact_link">
+										<div class="network_icon"> <img src="images/icons/pandora_32.png" /></div>
+										<div class="network_title font">Pandora</div>
+										<div class="network_username font">hostetcl</div>
+									</div>
+								</div>
+
+								<div id="contact_links_right">
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/facebook_32.png" /></div>
+										<div class="network_title font">Facebook</div>
+										<div class="network_username font">curt.hostetter</div>
+									</div>
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/twitter_32.png" /></div>
+										<div class="network_title font">Twitter</div>
+										<div class="network_username font">hostetcl</div>
+									</div>
+									<div class="contact_link">
+										<div class="network_icon"><img src="images/icons/lastfm_32.png" /></div>
+										<div class="network_title font">Last.fm</div>
+										<div class="network_username font">crossfirecurt</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="content_about">
+						<div id="content_about_container" class="font">
+							<a href="http://www.facebook.com/curt.hostetter"><img src="images/badge.png" alt="Curt Hostetter on Facebook" style="padding-top: 15px; border: 0px solid black; float:left; margin-right: 15px;" /></a>
+							<div style="padding-top:15px;">My name is Curt Hostetter. I'm a software engineer living in the Buffalo, NY area.</div>
+							<p>I build/maintain frontend and backend web services using Java, jQuery, PHP and MySQL. It's pretty awesome.</p>
+						</div>
+					</div>
+					
+				</div>
+				<div id="bottom_shadow"></div>
+			</div>
+			<div id="bottom_footer">
+				<div id="copyright" class="font">copyright &copy; 1986-2010 me</div>
+			</div>
+		</div>
+	</body>
+</html>

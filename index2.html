@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="author" content="Curt Hostetter" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+        
+        <link rel="stylesheet" type="text/css" href="" />
+        <link rel="icon" type="image/png" href="" />
+		<style type="text/css">
+			#product_widget{
+				position: relative;
+				background-color: #eee;
+				border: 1px solid #abb5c2;
+				width:780px;
+				height:95px;
+				z-index:1;
+			}
+			.widget_container{
+				text-align: left;
+				position: relative;
+				font-family: "Calibri", "Arial", "Sans Serif";
+				font-size: 16pt;
+				color: #323f67;
+				z-index:2;
+			}
+			.widget_left{
+				width: 200px;
+				float: left;
+				margin-right: 40px;
+				z-index:3;
+			}
+
+			body{
+				text-align: center;
+			}
+			.widget_image{
+				width: 132px;
+				height: 70px;
+				margin-top: 12px;
+				margin-right: 12px;
+				margin-bottom: 12px;
+				margin-left: 17px;
+				padding-right: 10px;
+				z-index:4;
+			}
+			.widget_link {
+				font-family: "verdana", "arial", "sans serif";
+				font-weight: bold;
+				font-size: 8pt;
+				color: #e44600;
+				
+				text-decoration: none;
+			}
+
+			.widget_right{
+				padding-top: 20px;
+				z-index:3;
+			}
+			.widget_right a:link { 
+				color: #e44600;
+				text-decoration: none;
+			}
+			.widget_right a:visited { 
+				color: #e44600;
+				text-decoration: none;
+			}
+			.widget_right a:hover { 
+				color: #e44600;
+				text-decoration: underline;
+			}
+			.widget_right a:active { 
+				color: #e44600;
+				text-decoration: none;
+			}
+			.widget_fade_top{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index:5;
+				width: 164px;
+				height: 11px;
+				background-image:url('images/fade_top.png');
+			}
+			.widget_fade_bottom{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index:5;
+				width: 164px;
+				height: 11px;
+				background-image:url('images/fade_bottom.png');
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cycle.all.2.72.js"></script>
+		<script>
+		$(document).ready(function() {
+				$('.widget_left').cycle({ 
+					fx:    'scrollDown', 
+					pause:  0,
+					random:  1,
+					timeout: 3000
+				});
+		});
+		</script>
+
+    </head>
+	<body>
+		<div id="product_widget">
+			<div class="widget_fade_top">
+			</div>
+			<div class="widget_container">
+				<div class="widget_left">
+					<div class="widget_image_container"><img class="widget_image" src="images/prodRich2.png"  alt="Hive Rich Client" /></div>
+					<div class="widget_image_container"><img class="widget_image" src="images/prodThin2.png"  alt="Hive Thin Client" /></div>
+					<div class="widget_image_container"><img class="widget_image" src="images/prodStudio2.png"  alt="Studio" /></div>
+					<div class="widget_image_container"><img class="widget_image" src="images/prodAPI.png"  alt="API" /></div>
+					<div class="widget_image_container"><img class="widget_image" src="images/prodHiveondemand2.png"  alt="HiveOnDemand" /></div>
+					<div class="widget_image_container"><img class="widget_image" src="images/prodInfostream.png"  alt="Infostream" /></div>
+				</div>
+				<div class="widget_right">
+					Learn More About Hive's Product Environments...<br />
+					<a class="widget_link" href="#">click here</a>
+				</div>
+			</div>
+			<div class="widget_fade_bottom">
+			</div>
+		</div>
+	</body>
+</html>
